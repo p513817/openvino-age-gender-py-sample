@@ -1,0 +1,20 @@
+
+{
+    "primary":{
+        "path": "./intel/face-detection-adas-0001/FP16/face-detection-adas-0001",
+        "device": "CPU",
+        "thres": 0.6,
+        "category":{
+            "1": "face"
+        }
+    },
+    "secondary":{
+        "path": "./intel/age-gender-recognition-retail-0013/FP16/age-gender-recognition-retail-0013",
+        "device": "MYRIAD",
+        "thres": 0.6,
+        "category": {
+            "0": "female",
+            "1": "male"
+        }
+    }
+}
