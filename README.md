@@ -35,7 +35,7 @@ The Intel OpenVINO Python Sample for Face Recognition and Age, Gender Recognitio
     * Default
         ![demo](assest/demo.png)
     * Application - [smart retail] recommand products for different age and gender.
-        ![demo](assest/smart_retail.png)
+        ![demo](assest/demo-smart-retail.png)
 
 # Configuration
 Define `primary` and `secondary` model parameters.
