@@ -1,4 +1,4 @@
-07-21-2022
+08-05-2022
 PROGRAMMER: Welcome to  
 FRAMEWORK:  
 MODE:  DESKTOP
@@ -9,4 +9,4 @@ MOUNT_CAMERA:  1
 COMMAND: bash 
 
 DOCKER COMMAND: 
-docker run --name ov-aiot -it --rm --net=host --ipc=host -v /etc/localtime:/etc/localtime:ro --device /dev/dri --device-cgroup-rule='c 189:* rmw' -v /dev/bus/usb:/dev/bus/usb -w /workspace -v /home/max/Workspace/Other/Innovation-day-custom-project/openvino-age-gender-py-sample:/workspace  --device /dev/video0:/dev/video0 --device /dev/video1:/dev/video1 -v /tmp/.x11-unix:/tmp/.x11-unix:rw -e DISPLAY=unix:1 ov-aiot "bash" 
+docker run --name ov-aiot -it --rm --net=host --ipc=host -v /etc/localtime:/etc/localtime:ro --device /dev/dri --device-cgroup-rule='c 189:* rmw' -v /dev/bus/usb:/dev/bus/usb -w /workspace -v /home/max/Workspace/openvino-age-gender-py-sample:/workspace  --device /dev/video0:/dev/video0 --device /dev/video1:/dev/video1 -v /tmp/.x11-unix:/tmp/.x11-unix:rw -e DISPLAY=unix:0 ov-aiot "bash" 
