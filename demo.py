@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     # Instance Source Object and Application Object
     src = Source(SRC, SRC_TYPE)
-    app = DiscountInfo(args.app_config) if args.app else None
+    app = DiscountInfo(args.app_config) if not args.no_app else None
     
     # Define Color
     trg_color = get_random_color()
@@ -55,12 +55,12 @@ if __name__ == '__main__':
     while True:
 
         # Get Input Data
-        ret, image = src.get_frame()
-        org_image = image.copy()
-        t_start = time.time()
+        ret, image  = src.get_frame()
+        org_image   = image.copy()
+        t_start     = time.time()
 
         # Pre-process
-        temp_image = preprocess(image, (nets[PRI][WIDTH], nets[PRI][HEIGHT]) )
+        temp_image  = preprocess(image, (nets[PRI][WIDTH], nets[PRI][HEIGHT]) )
 
         # Inference : result[<OUT_BLOB_NAME>] -> 1, 1, 200, 7
         nets[PRI][RESULT] = nets[PRI][EXEC].infer( inputs = { nets[PRI][IN_BLOB][0]: temp_image } )
@@ -91,7 +91,7 @@ if __name__ == '__main__':
                 gender, age = parse_gender_age(nets[SEC][RESULT], classes)
                         
                 # Application
-                if args.app:
+                if not args.no_app:
                     discount_info = app(age, gender)
                     trg_color = app.get_info_color(discount_info)
                     dets_text += "{} ".format(discount_info)
@@ -116,6 +116,7 @@ if __name__ == '__main__':
         # Resize Whole Image
         org_image = cv2.resize(org_image, (nets[ORG][WIDTH], nets[ORG][HEIGHT]))
 
+        # Add Logo
         if not args.no_logo:
             org_image = add_logo(org_image, logo)
 
@@ -146,7 +147,7 @@ if __name__ == '__main__':
             break
 
         elif key == ord('c'):
-            if args.app:
+            if not args.no_app:
                 app.generate_palette()
             else:
                 trg_color = get_random_color()

@@ -409,9 +409,10 @@ def draw_information(frame, informations:dict, font_scale = None):
 def set_argparse():
     parser = argparse.ArgumentParser()
     parser.add_argument("-c", "--config", help="path to config", default="config.json")
-    parser.add_argument("-a", "--app", help="enable app", action="store_true")
+    parser.add_argument("-a", "--app-config", help="path to app config", default="application.json")
+    parser.add_argument("--no-app", help="disable app ( smart retail )", action="store_true")
     parser.add_argument("--no-logo", help="disable innodisk logo", action="store_true")
-    parser.add_argument("--app-config", help="path to app config", default="application.json")
+    
 
     args = parser.parse_args()
     return args
