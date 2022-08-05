@@ -115,7 +115,9 @@ if __name__ == '__main__':
 
         # Resize Whole Image
         org_image = cv2.resize(org_image, (nets[ORG][WIDTH], nets[ORG][HEIGHT]))
-        org_image = add_logo(org_image, logo)
+
+        if not args.no_logo:
+            org_image = add_logo(org_image, logo)
 
         # Get Temperature
         temp = get_cpu_temp()
