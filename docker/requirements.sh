@@ -14,6 +14,6 @@ apt-get install -qqy libxrender1 libsm6 libxext6 #> /dev/null 2>&1
 
 printd "Install other msicellaneous packages " Cy
 apt-get -qy install bsdmainutils zip jq wget
-pip3 install --disable-pip-version-check cython wget colorlog
+pip3 install --disable-pip-version-check cython wget colorlog psutil
 
 printd -e "Done${REST}"

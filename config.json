@@ -10,7 +10,7 @@
     },
     "secondary":{
         "path": "./intel/age-gender-recognition-retail-0013/FP16/age-gender-recognition-retail-0013",
-        "device": "MYRIAD",
+        "device": "CPU",
         "thres": 0.6,
         "category": {
             "0": "female",

@@ -29,7 +29,14 @@ class Source():
         logging.warning('Detect source type is : {}'.format(self.intype))
         if self.status:
             if intype in ['V4L2', 'Video']:
+                
                 self.src = cv2.VideoCapture(self.input_data)
+                
+                if intype == "Video":
+                    self.src.set(6, cv2.VideoWriter.fourcc('M','J','P','G'))
+                    self.src.set(4, 1080)
+                    self.src.set(3, 1920)
+
             elif intype=='Image':
                 self.src = Img(self.input_data)            
             elif intype=='RTSP':
@@ -73,6 +80,17 @@ class Source():
 
     def get_type(self):
         return self.intype
+
+    def get_resolution(self):
+        width = self.src.get(cv2.CAP_PROP_FRAME_WIDTH)
+        height = self.src.get(cv2.CAP_PROP_FRAME_HEIGHT)
+        print(width, height)
+        return (width, height)
+
+    def get_fps(self):
+        fps = self.src.get(cv2.CAP_PROP_FPS) if self.intype == 'Video' else 0
+        print(fps)
+        return fps
 
     def stop(self):
         self.isStop = True
