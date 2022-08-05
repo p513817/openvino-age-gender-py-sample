@@ -9,7 +9,7 @@ The Intel OpenVINO Python Sample for Face Recognition and Age, Gender Recognitio
     $ ./docker/build.sh
 
     # Run container
-    $ ./docke/run.sh
+    $ ./docker/run.sh
     ```
 
 * Download and Convert Model
