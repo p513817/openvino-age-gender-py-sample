@@ -1,0 +1,12 @@
+{
+    "male": {
+        "60-100": "Viagra 50% off, Patek Philippe 3% off, Callaway 20% off",
+        "30-60": "Bose 10% off, Apple 3% off, FNAC 30% off, OSIM 15% off",
+        "0-30": "Nike 20% off, Bandai 5% off, ASUS ROG 10% off"
+    },
+    "female": {
+        "60-100": "Chanel 5% off, CTF 10% off, Bvlgari 10% off",
+        "30-60": "Combi 20% off, SK-II 10% off, Lutein 30% off, Philps 10% off ",
+        "0-30": "Dior/ YSL cosmetics 10% off, 10/10 perfums 20% off, Aesop 20% off"
+    }
+}
