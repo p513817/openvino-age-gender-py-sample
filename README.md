@@ -22,22 +22,23 @@ The Intel OpenVINO Python Sample for Face Recognition and Age, Gender Recognitio
 
 * Run demo
     ```bash
-    # Run default : age and gender
-    python3 demo.py -c config.json
-
-    # With custom application
     python3 demo.py -c config.json --app
+
+    # Run default : age and gender
+    python3 demo.py -c config.json --no-app
+
     ```
     * Fetures
         * press a to toggle full screen.
         * press q to quit.
         * press c to change color.
     * Default
-        ![demo](assest/demo.png)
-    * Application - [smart retail] recommand products for different age and gender.
+        ![demo](assest/demo-gender-age.png)
+    * Smart Retail - [smart retail] recommand products for different age and gender.
         ![demo](assest/demo-smart-retail.png)
 
 # Configuration
+
 * About Model
     Define `primary` and `secondary` model parameters.
     ```JSON
