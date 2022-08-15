@@ -22,7 +22,7 @@ The Intel OpenVINO Python Sample for Face Recognition and Age, Gender Recognitio
 
 * Run demo
     ```bash
-    python3 demo.py -c config.json --app
+    python3 demo.py -c config.json
 
     # Run default : age and gender
     python3 demo.py -c config.json --no-app
